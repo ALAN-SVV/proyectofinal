@@ -1,0 +1,139 @@
+html{
+    font-size: 16px;
+}
+
+/*voy a usar mediasquery para hacer adaptable la letra aun dispositivo diferente*/
+@media screen and(mas-whidth: 400px){
+    html{
+    font-size: 9.9411764705882353px;
+    }
+}   
+
+/*Detalles de pagina*/
+body{
+    background-color: rgb(0, 0, 0);/*Fondo de pagina*/
+    font-family: Slabo+27px;  /*Tipo de letra*/
+    font-size: 1.2rem; /*muktiplica la medida padre por rem  */
+    font-style: normal;
+    font-weight: normal; /*Grosor de letra*/
+    line-height: 1.500; /* Interlineado entre filas */
+}
+
+/*HEADER========================================================================*/
+
+.header-logo { /*Imagen de pagina principal*/
+    text-align: center; /*Centra la imagen*/
+}
+
+.header-logo, .site-logo{
+    color:rgba(163, 93, 93, 0.603) ; /*Color del mensaje cuando no carga la imagen*/
+}
+
+/*Hipervinculos*/
+.header-nav-wrap{ /*Barra de navegacion*/
+    background-color: rgba(156, 156, 156, 0.473); /*Color del casillero de la barra de navegacion*/
+}
+
+.header-nav-wrap ul{  /*Opciones de la barra de navegacion*/
+
+    display: flex; /*Se usa para alinear los elementos*/
+    justify-content:center; /*Distribuye el espacio entre los elementos*/
+    padding: 0 0;
+    margin: 0 0;
+    width: 100%; /*Ancho que va a ocupar del casillero*/
+}
+ 
+.header-nav-wrap a{  /*Configurar letra colores etc de las ocpines de navegacion*/
+
+    background-color: rgba(0, 0, 0, 0.103);
+    font-size: 12px; /*Tamaño de las letras*/
+    text-transform: uppercase; /*Todas las letras a mayusculas*/
+    color:rgba(253, 154, 154, 0.59) ;
+    transition: all 5 ease-in-out;/*Velocidad del desplazamiento del hipervinculo*/
+    text-decoration: none; /*Marcado de opción*/
+    list-style-type: none; /*Marcador de opcion*/
+    letter-spacing: 0.2rem; /*Espaciado entre letras*/
+ 
+}
+
+.header-nav-wrap li{ /*Opciones de navegacion*/
+    margin-right: 60px; /*Epacio entre las opciones de navegacion*/
+    display: inline-block; /*Posicion de la opciones*/
+    list-style: none; /*Estilo de marcado de opcion*/
+}
+
+a:hover,/*color del link*/
+a:focus,/*brillo sobre el link*/
+a:active{  /*activación*/
+    color: rgba(0, 255, 255, 0.675);
+}
+/*=============================================================================*/
+
+
+
+/*BODY============================*/
+h1{ /*Titulos*/  
+    color:rgba(113, 231, 247, 0.432);
+    text-align: center;
+}
+
+h2{
+    color: rgba(166, 100, 228, 0.479);
+}
+
+h3{ /*Parrafos*/
+   color: rgba(255, 255, 255, 0.63);
+   text-align: justify;
+
+}
+/*=====================================================*/
+
+
+
+/*BARRA DE REDES SOCIALES ==========================================*/
+.header-social a{
+    color:rgba(252, 134, 134, 0.59) ;
+}
+
+a:hover,/*color del link*/
+a:focus,/*brillo sobre el link*/
+a:active{  /*activación*/
+    color: rgba(0, 255, 255, 0.675);
+}
+
+.header-social{
+    background-color: bisque;
+}
+
+.header-social li{
+    
+    display: inline-block; /*Posicion de las redes sociales*/
+    
+}
+/*=?===================================================================*/
+/*El ususario agrega cuantos productos quiere llevar y poner en el carrito*/
+  .producto {
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 20px;
+  margin: 10px;
+}
+
+.producto img {
+  max-width: 200px;
+  height: auto;
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contador button {
+  width: 30px;
+  height: 30px;
+}
+.proceso img{
+
+}

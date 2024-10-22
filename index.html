@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/vendor.css">
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/font-awesome/css/fontawesome-all.css">
+    <title>ChuChAquI</title>
+
+    <!--Javicon icono de la pestaña
+    ======================================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/3.jpg"> <!-- generador de icono de pestaña apple-->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/2.jpg">
+    <!--generador de icono de pestaña y Ubicador de img que se usa de icono-->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/1.jpg">
+    <!--Alerta para saber si el ususario es mayor de edad-->
+    <script>
+        function checkAge() {
+            var age = prompt("¿Eres mayor de edad? (Sí/No)");
+            if (age.toLowerCase() === "sí") {
+                alert("¡Bienvenido!");
+            } else if (age.toLowerCase() === "no") {
+                alert("Lo siento, debes ser mayor de edad para continuar.");
+            } else {
+                alert("Respuesta no válida. Por favor, responde con 'Sí' o 'No'.");
+            }
+        }
+
+        window.onload = checkAge;
+
+        const botonesSumar = document.querySelectorAll('.sumar');
+        const botonesRestar = document.querySelectorAll('.restar');
+
+        botonesSumar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const inputCantidad = boton.parentNode.querySelector('input');
+                inputCantidad.value = parseInt(inputCantidad.value) + 1;
+            });
+        });
+
+        botonesRestar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const inputCantidad = boton.parentNode.querySelector('input');
+                if (inputCantidad.value > 1) {
+                    inputCantidad.value = parseInt(inputCantidad.value) - 1;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body id="top">
+    <!--Vista de carga o login-->
+    <div>
+        <div class="loader"></div>
+    </div>
+
+
+    <!--INICIO HEADER-->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a href="index.html" class="site-logo"> <!--Referencia al index-->
+                <img src="Imagenes/" alt="Hompage"> <!--alt=mensaje si la imagen no carga-->
+            </a>
+        </div>
+        <!--Barra de Navegación-->
+        <nav class="header-nav-wrap">
+
+            <ul class="header-main-nav">
+
+                <li class="current"><a href="#intro" class="smoothscroll" title="Intro">Introducción</a></li>
+                <!--Se generan los hipervinvulos de navegacion-->
+
+                <li><a href="#nosotros" class="smoothscroll" title="Nosotros">A Cerca de Nosotros</a></li>
+                <!--href=hacer referencia-->
+
+                <li><a href="#producto" class="smoothscroll" title="Producto">Productos</a></li>
+                <!--Class=Funcion para llamar y editar en css-->
+
+                <li><a href="#proceso" class="smoothscroll" title="Proceso">Proceso de Elaboración</a></li>
+                <!--Tittle=Nombre del hipervinculo-->
+
+                <li><a href="#contactos" class="smoothscroll" title="Contactanos">Contactanos</a></li>
+
+            </ul>
+
+
+        </nav>
+
+    </header>
+    <!--FIN DEL HEADER-->
+
+
+    <!--INICIO DE INTRO-->
+    <section id="intro" class="section-intro">
+        <div class="row intro-content">
+
+            <div class="intro-main">
+
+                <h1 title="Tittle">¡Bienvenidos a ChuCHAqui! </h1><!--BR= salto de linea-->
+
+                <h3 title="Intro">
+                    Tu destino número uno para disfrutar de los mejores licores artesanales y bebidas premium. En
+                    ChuCHAqui, celebramos cada brindis con
+                    productos seleccionados especialmente para quienes buscan calidad y sabor inigualable. Ya sea que
+                    estés preparando una reunión con amigos,
+                    una ocasión especial, o simplemente quieras relajarte con una bebida exquisita, aquí encontrarás lo
+                    que necesitas.
+                    Descubre nuestra amplia gama de licores, desde clásicos tradicionales hasta innovaciones únicas que
+                    elevarán tus sentidos. </h3>
+                <h2>¡Haz de cada momento una celebración con ChuCHAqui!</h2>
+
+            </div>
+
+            <div class="img-intro">
+
+                <img src="Imagenes/" alt="Presentación">
+
+            </div>
+
+        </div>
+    </section>
+    <!--FIN DE INTRO-->
+
+
+    <!--INICIO ACERCA DE NOSOTROS-->
+    <section id="nosotros"><!--Realizamos una clase-->
+
+        <div class="row info-content">
+
+            <div class="info-main">
+
+                <h1 title="Nosotros"> A Cerca de Nosotros</h1><br><!--titulo-->
+
+                <h3>
+                    <p>Nuestra historia comienza en 1970, cuando se buscaban los diferentes
+                        medios para combatir las pobrezas en Salinas, se tomó la decisión
+                        de emprender con el cooperativismo, apoyándonos con voluntarios
+                        extranjeros y en la iglesia. Una persona muy importante que intervino
+                        también fue Mon.s Cándido Rada, ya que fue el primer Obispo de Guaranda,
+                        quien brindo su ayuda para convertir el pueblo en un lugar organizado y agroindustrial,
+                        lo que provoca una mejora de vida para sus habitantes, vitando migraciones y haciéndolo
+                        una referencia para el país</p>
+                </h3><!--Colocamos información jutno con la etiqueta de parrafo-->
+                <center><!--Centramos la imagen y ponemos la direccion-->
+                    <img src="https://salinerito.com/wp-content/uploads/2022/03/historia-funcoquerucom.jpg"
+                        alt="Imagen Antigua del Salnerito ">
+                </center>
+                <h3>
+                    <p>Gracias a proyectos como el Salinerito se pudo demostrar el buen desarrollo rural
+                        de las comunidades del Ecuador, y hasta se considera como una experiencia modelo en
+                        la Economía Social y Solidaria, dando a conocer los productos, lugares turísticos y
+                        emprendimientos de Guaranda en todas las provincias </p>
+                </h3>
+
+            </div>
+
+            <div class="img-info">
+                <img src="" alt="Nosotros">
+            </div>
+
+        </div>
+    </section>
+    <!--FIN DE ACERCA DE NOSOTROS-->
+
+
+    <!--INICIO DE PRODUCTOS-->
+    <section id="producto">
+        <h1>Nuestros Productos</h1>
+        <article>
+            <div class="img-catalogo">
+                <img src="Imagenens/1.jpg" alt="producto#1">
+                <h2>Aguardiente sabor a coco</h2>
+                <p>Precio: $15.00</p>
+                <div class="contador">
+                    <button class="restar">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="sumar">+</button>
+                </div>
+                <button class="agregar-carrito">Agregar al carrito</button>
+                <img src="Imagenens/2.jpg" alt="producto#2">
+                <h2>Aguardiente sabor de uva</h2>
+                <p>Precio: $7.00</p>
+                <div class="contador">
+                    <button class="restar">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="sumar">+</button>
+                </div>
+                <button class="agregar-carrito">Agregar al carrito</button>
+                <img src="Imagenens/3.jpg" alt="producto#3">
+                <h2>Aguardiente sabor chicle</h2>
+                <p>Precio: $9.00</p>
+                <div class="contador">
+                    <button class="restar">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="sumar">+</button>
+                </div>
+                <button class="agregar-carrito">Agregar al car
+                    <h2>Aguardiente sabor de piña</h2>
+                    <p>Precio: $5.00</p>
+                    <div class="contador">
+                        <button class="restar">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="sumar">+</button>
+                    </div>
+                    <button class="agregar-carrito">Agregar al carrito</button>
+                    <img src="Imagenens/5.jpg" alt="producto#5">
+                    <h2>Aguardiente sabor a cafe</h2>
+                    <p>Precio: $8.00</p>
+                    <div class="contador">
+                        <button class="restar">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="sumar">+</button>
+                    </div>
+                    <button class="agregar-carrito">Agregar al carrito</button>
+                    <img src="Imagenens/6.jpg" alt="producto#6">
+                    <h2>Aguardiente sabor a chocolate</h2>
+                    <p>Precio: $10.00</p>
+                    <div class="contador">
+                        <button class="restar">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="sumar">+</button>
+                    </div>
+                    <button class="agregar-carrito">Agregar al carrito</button>
+            </div>
+        </article>
+
+    </section>
+    <!--FIN DE PRODUCTOS-->
+
+
+    <!--INICIO PROCESO DE ELAB-->
+    <section id="proceso"><!--Creamos una clase-->
+
+        <h1>Proceso de elaboracion</h1><!--Ponemos el titulo e información puntual-->
+
+        <h3>Nos especializamos en la producción de diferentes sabores de guanchaca,
+            lo hacemos de una manera tradicional y artesanal respetando las costumbres locales
+            para esto seguimos diferentes procedimientos:</h3><br><!--Con las etiqutas vamos poniendo el proceso
+             de elaoración-->
+
+        <h3>1. En algunas regiones pueden cambiar con maíz, pero nosotros elaboramos nuestro producto
+            con caña de azúcar, la molemos y extraemos su jugo, para luego ser mezcladas con gua y dejar que se
+            fermenten con las levaduras</h3>
+
+        <!--Adjuntamos diferentes imagenes para dar un ejemplo de nuestra elaboración-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1oLF4si07eZJj_UXHTZ1w1z_57Ytk34PcQw&s"
+            alt="Caña de Azucar" width="500px" height="200px">
+
+        <h3>2. Luego procedemos con la destilación, la cual realizamos en alambiques, dentro de estos se
+            calienta la sustancia para separar el alcohol de otros componentes </h3>
+        <img src="https://dstila.com/wp-content/uploads/2021/05/AlambiqueContenido.jpg" alt="Destilación" width="400px"
+            height="300px">
+
+        <h3>3. El vapor se condensa y se recoge, en algunos casos se vuelve a destilar el alcohol
+            para aumentar su concentración y pureza </h3>
+        <img src="https://thefoodtech.com/wp-content/uploads/2022/04/destilaacion-proceso-700x382.jpg"
+            alt="Produccion de Guanchaca" width="500 px" height="200px">
+        <h3>4. En este paso ya comenzamos con el embotellamiento, aunque en algunas ocasiones se deja madurar
+            el trago en recipientes de madera, para luego ser embotellado y completado para su consumo </h3>
+        <img src="https://img.freepik.com/fotos-premium/linea-embotellado-whisky-entorno-fabrica-estandar-produccion-eficiente_174533-48459.jpg"
+            alt="Embotellamiento" width="500px" height="300px">
+
+    </section>
+    <!--FIN DE PROCESO DE ELAB-->
+
+
+    <section id="contactos">
+        <!--Lista desorndenada para las redes-->
+
+        <ul class="header-social">
+
+            <li><a href="https://www.facebook.com/profile.php?id=100022877347182&locale=es_LA"><i
+                        class="fab fa-facebook" aria-hidden="true">FACEBOOK</i></a></li>
+
+            <li><a href="https://x.com/MartinS39055366"><i class="fab fa-twitter" aria-hidden="true">TWITTER</i></a>
+            </li>
+            <!--aria-hidden= no visible para el user-->
+
+            <li><a href="https://www.instagram.com/martinsebas17/"><i class="fab fa-instagram"
+                        aria-hidden="true">INSTAGRAM</i></a></li>
+
+            <li><a href="https://www.youtube.com/@HolaSoyGerman" class="fab fa-youtube" aria-hidden="true">YOUTUBE</a>
+            </li>
+
+        </ul>
+    </section>
+    <a href="#" class="header-menu-toogle"><span>Menu</span></a>
+</body>
+
+</html>
